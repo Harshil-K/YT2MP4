@@ -30,6 +30,10 @@ RUN apt-get update && apt-get install -y ffmpeg
 # Set backend work directory
 WORKDIR /app
 
+#copy cookies source
+COPY cookies.txt .
+
+
 # Copy backend source code
 COPY ./Backend ./Backend
 COPY ./Backend/requirements.txt .

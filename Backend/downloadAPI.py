@@ -12,6 +12,7 @@ def downloadVideo(url: str) -> str:
         'outtmpl': output_filename,
         'merge_output_format': 'mp4',
         'quiet': True,
+        'cookies': 'cookies.txt',
     }
 
     with yt_dlp.YoutubeDL(ydl_opts) as ydl:
